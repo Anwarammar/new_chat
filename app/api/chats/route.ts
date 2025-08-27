@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getChatsForUser } from '@/lib/storage';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     const userId = request.headers.get('x-user-id');
